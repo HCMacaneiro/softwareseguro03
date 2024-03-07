@@ -24,6 +24,10 @@ public class Album {
                 + "Ano: " + this.ano + "\n"
                 + "Nome: " + this.nome + "\n"
                 + "Artista: " + this.artista + "\n"
-                + "Musicas: " + this.musicas);
+                + "Músicas:");
+
+        for (Musica musica : this.musicas) {
+            System.out.println(" - Título: " + musica.getTitulo() + ", Duração: " + musica.getDuracao() + ", Compositor: " + musica.getCompositor().getNome());
+        }
     }
 }
