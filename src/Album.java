@@ -15,8 +15,8 @@ public class Album {
         this.musicas = new ArrayList<Musica>();
     }
 
-    public void setMusicas(Musica musica) {
-        this.musicas.add(musica);
+    public void setMusicas(ArrayList<Musica> musicas) {
+        this.musicas = musicas;
     }
 
     public void mostraTodosOsDados() {
