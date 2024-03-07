@@ -12,8 +12,7 @@ public class Main {
         System.out.println("Digite a idade do compositor:");
         int idadeCompositor = scanner.nextInt();
         Pessoa compositor = new Pessoa(nomeCompositor, idadeCompositor);
-
-
+        scanner.nextLine();
         System.out.println("Digite o gênero do álbum:");
         String generoAlbum = scanner.nextLine();
         System.out.println("Digite o ano do álbum:");
@@ -23,20 +22,19 @@ public class Main {
         String nomeAlbum = scanner.nextLine();
         System.out.println("Digite o nome do artista:");
         String artistaAlbum = scanner.nextLine();
-
         System.out.println("Digite o número de músicas no álbum:");
         int numMusicas = scanner.nextInt();
         ArrayList<Musica> musicasAlbum = new ArrayList<Musica>();
+        scanner.nextLine();
         for (int i = 0; i < numMusicas; i++) {
             System.out.println("Digite o título da música:");
-            scanner.nextLine();
             String tituloMusica = scanner.nextLine();
             System.out.println("Digite a duração da música:");
             String duracaoMusica = scanner.nextLine();
             Musica musica = new Musica(tituloMusica, duracaoMusica, compositor);
-            musicasAlbum.add(new Musica(tituloMusica, duracaoMusica, compositor));
+            musicasAlbum.add(musica);
         }
-
+        System.out.println("Teste");
         Album album = new Album(generoAlbum, anoAlbum, nomeAlbum, artistaAlbum);
         album.setMusicas(musicasAlbum);
         album.mostraTodosOsDados();
